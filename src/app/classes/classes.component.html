@@ -1,32 +1,30 @@
 <div class="container">
-  <label for="exampleFormControlInput1" class="form-label">Turma</label>
-  <select class="form-select" aria-label="Default select example">
-    <option selected>Selecione a turma</option>
-    <option value="1">Turma 1</option>
-    <option value="2">Turma 2</option>
-    <option value="3">Turma 3</option>
-  </select>
+  <form [formGroup]="classesForm">
+    <label for="exampleFormControlInput1" class="form-label">Turma</label>
+    <select class="form-select" aria-label="Default select example" (change)="filterClassChange()" formControlName="class" id="class">
+      <option selected>Selecione a turma</option>
+      <option value="1">Turma 1</option>
+      <option value="2">Turma 2</option>
+      <option value="3">Turma 3</option>
+    </select>
+    <br/>
+    <label for="exampleFormControlInput1" class="form-label">Disciplina</label>
+    <select class="form-select" aria-label="Default select example" (change)="filterSubjectChange()" formControlName="subject" id="subject">
+      <option selected>Selecione a disciplina</option>
+      <option value="1">Disciplina 1</option>
+      <option value="2">Disciplina 2</option>
+      <option value="3">Disciplina 3</option>
+      <option value="4">Disciplina 4</option>
+    </select>
+    <br />
+    <input class="form-control" list="datalistOptions" id="exampleDataList" (keyup)="filterContentChange()" (change)="filterContentChange()" formControlName="content" id="content" autocomplete="off" placeholder="Digite o conteúdo para procurar...">
+    <datalist id="datalistOptions">
+      <option value="Alfabeto">
+      <option value="Sílabas">
+    </datalist>
+  </form>
 <br/>
-<label for="exampleFormControlInput1" class="form-label">Disciplina</label>
-<select class="form-select" aria-label="Default select example">
-  <option selected>Selecione a disciplina</option>
-  <option value="1">Disciplina 1</option>
-  <option value="2">Disciplina 2</option>
-  <option value="3">Disciplina 3</option>
-  <option value="4">Disciplina 4</option>
-</select>
-<br />
-<label for="exampleFormControlInput1" class="form-label">Conteúdo</label>
-<select class="form-select" aria-label="Default select example">
-  <option selected>Selecione o conteúdo</option>
-  <option value="1">Conteúdo 1</option>
-  <option value="2">Conteúdo 2</option>
-  <option value="3">Conteúdo 3</option>
-  <option value="4">Conteúdo 4</option>
-</select>
-
-<br/>
-<div class="porcentage">
+<div class="porcentage" *ngIf="showPorcentage">
   <div style="background-color: mistyrose; width: 67%;">
   <span>Item 1 - 67% </span>
 </div>
@@ -37,7 +35,7 @@
 
 <br/>
 <br />
-<div class="cont-cards">
+<div class="cont-cards" *ngIf="showSugestions">
   <div class="card" style="width: 18rem;">
     <img src="https://megaleitores.com.br/images/livros/pedro-maia-soares/companhia-das-letrinhas/abc-do-zoo-animais-do-brasil/73611/9788585466251-pedro-maia-soares-companhia-das-letrinhas-abc-do-zoo-animais-do-brasil-5e949c260c432-540x728.jpg" class="card-img-top" alt="...">
     <div class="card-body">
