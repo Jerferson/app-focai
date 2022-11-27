@@ -1,1 +1,25 @@
-<p>registration works!</p>
+<div class="container my-class">
+  <form>
+      <div class="mb-3">
+        <label class="form-label">Nome do Aluno</label>
+        <input class="form-control" formControlName="name" id="name" placeholder="Name" autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">N° de Registro</label>
+        <input class="form-control" formControlName="name" id="name" placeholder="Número de registro" autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Data Nascimento</label>
+        <input type="date" class="form-control" formControlName="birth_date" id="birth_date" placeholder="Data" autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Nome do Responsável</label>
+        <input class="form-control" formControlName="birth_date" id="birth_date" placeholder="Nome responsável pelo aluno..." autocomplete="off">
+      </div>
+      <div class="mb-3">
+        <label  class="form-label">Telefone responsável</label>
+        <input class="form-control" formControlName="birth_date" id="birth_date" placeholder="(00) 00000-0000" autocomplete="off">
+      </div>
+  <button type="submit" class="btn btn-success" [disabled]="true">Cadastrar</button>
+  </form>
+</div>
