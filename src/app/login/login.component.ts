@@ -18,8 +18,8 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required])
+      email: new FormControl('professor@escola.com', [Validators.required, Validators.email]),
+      password: new FormControl('1234', [Validators.required])
     });
 
     if (this.loginService.userIsLogged){
@@ -36,10 +36,10 @@ export class LoginComponent {
       alert("Usuário ou senha inválidos!")
       return
     }
-    if (res.isAdmin) {
+    // if (res.isAdmin) {
       this.router.navigate(['/'])
-      return
-    }
-    this.router.navigate(['/classes'])
+      // return
+    // }
+    // this.router.navigate(['/classes'])
   }
 }

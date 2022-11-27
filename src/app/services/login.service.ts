@@ -14,7 +14,7 @@ export class LoginService {
 
     },
     {
-      email: 'prof@escola.com',
+      email: 'professor@escola.com',
       name: 'Professora',
       password: '1234',
       isAdmin: false

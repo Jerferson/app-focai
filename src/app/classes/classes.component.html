@@ -1,67 +1,48 @@
 <div class="container">
-  <form [formGroup]="classesForm">
-    <label for="exampleFormControlInput1" class="form-label">Turma</label>
-    <select class="form-select" aria-label="Default select example" (change)="filterClassChange()" formControlName="class" id="class">
-      <option selected>Selecione a turma</option>
-      <option value="1">Turma 1</option>
-      <option value="2">Turma 2</option>
-      <option value="3">Turma 3</option>
-    </select>
-    <br/>
-    <label for="exampleFormControlInput1" class="form-label">Disciplina</label>
-    <select class="form-select" aria-label="Default select example" (change)="filterSubjectChange()" formControlName="subject" id="subject">
-      <option selected>Selecione a disciplina</option>
-      <option value="1">Disciplina 1</option>
-      <option value="2">Disciplina 2</option>
-      <option value="3">Disciplina 3</option>
-      <option value="4">Disciplina 4</option>
-    </select>
-    <br />
-    <input class="form-control" list="datalistOptions" id="exampleDataList" (keyup)="filterContentChange()" (change)="filterContentChange()" formControlName="content" id="content" autocomplete="off" placeholder="Digite o conteúdo para procurar...">
-    <datalist id="datalistOptions">
-      <option value="Alfabeto">
-      <option value="Sílabas">
-    </datalist>
-  </form>
-<br/>
-<div class="porcentage" *ngIf="showPorcentage">
-  <div style="background-color: mistyrose; width: 67%;">
-  <span>Item 1 - 67% </span>
-</div>
-<div style="background-color: lightcyan; width: 33%;">
-  <span>Item 2 - 33%</span>
-</div>
-</div>
+<label for="exampleFormControlInput1" class="form-label">Filtrar Turma</label>
+  <input class="form-control" list="datalistOptions" id="exampleDataList" (keyup)="filterContentChange()"
+    (change)="filterContentChange()" formControlName="content" id="content" autocomplete="off"
+    placeholder="Digite o conteúdo para procurar...">
+  <datalist id="datalistOptions">
+    <option value="Primeira Série A-1">
+    <option value="Primeira Série A-2">
+    <option value="Primeira Série B-1">
+    <option value="Primeira Série B-2">
+    <option value="Segunda Séria A-1">
+    <option value="Segunda Séria A-2">
+    <option value="Segunda Séria B-1">
+    <option value="Segunda Séria B-2">
+  </datalist>
 
-<br/>
-<br />
-<div class="cont-cards" *ngIf="showSugestions">
-  <div class="card" style="width: 18rem;">
-    <img src="https://megaleitores.com.br/images/livros/pedro-maia-soares/companhia-das-letrinhas/abc-do-zoo-animais-do-brasil/73611/9788585466251-pedro-maia-soares-companhia-das-letrinhas-abc-do-zoo-animais-do-brasil-5e949c260c432-540x728.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">Utilizar imagens de animais para associar as letras do alfabeto.
-      </p>
-    </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img
-      src="http://cdn5.colorir.com/desenhos/color/201903/cubos-educacionais-abc-colegio-1510461.jpg"
-      class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">Utilizar objetos para estimular a aprendizagem do alfabeto.
-      </p>
-    </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img
-      src="https://i.ytimg.com/vi/8drAYiiKlW8/maxresdefault.jpg"
-      class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">Utilizar músicas para desenvolver letras do alfabeto.
-      </p>
-    </div>
-  </div>
-  </div>
+  <br/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Traços</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>5 anos</td>
+        <td>83% <span class="badge bg-danger">Cinestésico</span></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>5 anos</td>
+        <td>55% <span class="badge bg-warning text-dark">Auditivo</span></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry the Bird</td>
+        <td>6 anos</td>
+        <td>69% <span class="badge bg-success">Visual</span></td>
+      </tr>
+    </tbody>
+  </table>
 </div>

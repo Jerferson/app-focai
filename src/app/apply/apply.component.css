@@ -1,0 +1,18 @@
+.porcentage {
+  width: 100%;
+  display: flex;
+}
+
+.porcentage div {
+  height: 20px;
+}
+
+
+.cont-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cont-cards div {
+  margin: 5px;
+}

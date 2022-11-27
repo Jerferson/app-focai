@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component'
 import { ApplicationComponent } from './application/application.component'
+import { ApplyComponent } from './apply/apply.component'
 import { ClassesComponent } from './classes/classes.component'
 import { ContentsComponent } from './contents/contents.component'
 import { GroupComponent } from './group/group.component'
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'apply',
+        component: ApplyComponent
       },
       {
         path: 'classes',

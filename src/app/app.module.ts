@@ -12,7 +12,8 @@ import { ContentsComponent } from './contents/contents.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './services/login.service'
 import { ReactiveFormsModule } from '@angular/forms';
-import { ApplicationComponent } from './application/application.component'
+import { ApplicationComponent } from './application/application.component';
+import { ApplyComponent } from './apply/apply.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ApplicationComponent } from './application/application.component'
     RegistrationComponent,
     ContentsComponent,
     LoginComponent,
-    ApplicationComponent
+    ApplicationComponent,
+    ApplyComponent
   ],
   imports: [
     BrowserModule,
